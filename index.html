@@ -82,7 +82,7 @@ li h1{
     margin-top: 5px;
     display:none;
 }
-@media only screen and (max-width:650px){
+@media only screen and (max-width:700px){
 button{
     margin-top: 2px;
     margin-bottom: 4px;
@@ -96,19 +96,13 @@ button{
     padding-bottom: 4px;
   }
   li a{    
-    width:40%;
-    background: linear-gradient(#02005d,#00a2ffee);
-    position: absolute;
-    display: block;
-    color: white;
-    top:75px;
-    right:0;
-    z-index:2;
+    display:none;
   }
   li h1{
     color:#02005d;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 30px;
     margin-top: 3px;
     padding-top: 0px;
     padding-left: 70px;
@@ -176,7 +170,7 @@ li button{
   <li><a href="#schedule">Schedule</a></li>
   <li><a href="#about">About</a></li>
   <li><h1>iACT 2023</h1></li>
-  <li><button>REGISTER NOW</button><li>
+  <li><button onclick="location.href='regpage.html'">REGISTER NOW</button><li>
 </ul>
 <div class="dropdown">
     <button><img src="images/menu.png" class="menu-icon"/></button>
@@ -188,8 +182,8 @@ li button{
   </div>
 <div style="padding:20px;margin-top:30px;height:1500px; color: azure    ;">
   <h1>iACT</h1>
+  
 
-
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
@@ -206,10 +200,12 @@ li button{
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
+  <h1><a id="events">EVENTS </h1>
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
+  
 </div>
 
 </body>
