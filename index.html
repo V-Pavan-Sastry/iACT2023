@@ -127,9 +127,6 @@ li button{
     font-weight: bold;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
-  .li button a{
-    text-decoration:none;
-  }
 .dropdown {
     top: 2px;
   display: inline-block;
@@ -173,7 +170,7 @@ li button{
   <li><a href="#schedule">Schedule</a></li>
   <li><a href="#about">About</a></li>
   <li><h1>iACT 2023</h1></li>
-  <li><button><a href="regpage.html">REGISTER NOW</button><li>
+  <li><button onlclick="registration_page()">REGISTER NOW</button><li>
 </ul>
 <div class="dropdown">
     <button><img src="images/menu.png" class="menu-icon"/></button>
@@ -208,9 +205,14 @@ li button{
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
-  
-</div>
 
+</div>
+<script>
+  function registration_page():
+  {
+    window.open("regpage.html");
+  }
+  </scrpt>
 </body>
 </html>
 
