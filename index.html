@@ -23,9 +23,10 @@
   background: #00a2ffee; 
 }
 body {
+font-family: Arial, Helvetica, sans-serif;
 margin:0;
 overflow-x: hidden;
-background-repeat: no-repeat;
+background-repeat:no-repeat;
 background-position: center;
 background-size: cover;
 }
@@ -42,6 +43,7 @@ ul {
   top: 0;
   width: 100%;
   box-shadow: 10px 5px 5px black;
+  z-index: 3;
 }
 
 li {
@@ -108,11 +110,97 @@ li h1{
   margin-top:45px;
   display: block;
 }
+.event-details {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.event-date,
+.event-time,
+.event-contact,
+.event-description {
+  font-weight: bold;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.193);  
+  backdrop-filter: blur(5px);
+  box-shadow: 2px 2px 2px 2px#FFFFFF;
+  padding: 40px 40px 40px 40px;
+  margin-top: 50px;
+  
+}
+
+.column {
+  flex-basis: 48%;
+  margin-bottom: 20px;
+}
+.event_image{
+    width:400px;
+  }
 
 @media only screen and (max-width:700px){
+  body{
+    overflow-x: hidden;
+  }
+  .container{
+    background-color: rgba(255, 255, 255, 0.193);  
+  backdrop-filter: blur(5px);
+  }
+  .row {
+    padding-left: 10px;
+    flex-direction: column        ;
+    align-items: center;
+    box-shadow: 0px 0px 0px 0px#FFFFFF;
+    background-color: rgba(255, 255, 255, 0);  
+    backdrop-filter: blur(5px);
+  }
+  
+  .column {
+    flex-basis: 100%;
+    
+  }
+  .event-details {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .event_image{
+    width:200px;
+    position: fixed;
+    margin-top:150px;
+    padding:0;  
+
+  }
   .mainframe img{
   width:100%;
-  margin-top:40px;
+  margin-top:35px;
   display: block;
 }
 button{
@@ -122,7 +210,7 @@ button{
 ul
 {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
+  position: fixed;
 
 }
   li img{
@@ -152,7 +240,8 @@ ul
 li button{
     background-color:#00a2ffee;
     color: azure;
-    margin-top: 7px;
+    margin-top: 2px;
+    position: fixed;
     margin-left: 7px;
     padding-top: 7px;
     padding-left: 7px;
@@ -167,6 +256,7 @@ li button{
 }
 .dropdown {
     top: 2px;
+    z-index: 3;
   display: inline-block;
   position: fixed;
 }
@@ -203,12 +293,12 @@ li button{
 <body background="images/bg.png">
     
 <ul>
-    <li><a class="active" href="#home">Home</a></li>
+  <li><a class="active" href="#home">Home</a></li>
   <li><a href="#events">Events</a></li>
   <li><a href="#schedule">Schedule</a></li>
   <li><a href="#about">About</a></li>
   <li><h1>iACT 2023</h1></li>
-  <li><button id="myButton">REGISTER NOW</button><li>
+  <li><button id="myButton">REGISTER NOW</button></li>
 </ul>
 <div class="dropdown">
     <button><img src="images/menu.png" class="menu-icon"style="background-color:#00a2ffee;"/></button>
@@ -222,10 +312,62 @@ li button{
     <img src="images/maindesk.png">
     </div>
 <div style="padding:20px;margin-top:0px;height:fit-content;color:azure;align-items:center;">
-  <h1><a id="events"style="padding-left">EVENTS </h1>
-    <img src="images/panacea.png" style="width:100%;display: block;">
-    <img src="images/aiml.png"style="width:100%;display: block;">
-    <img src="images/chatgpt.png"style="width:100%;display: block;">
+  <h1><a id="events"style="padding-left:30px;text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">EVENTS </h1>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img class="event_image"src="images/panacea_left.png">
+        </div>
+        <div class="column">
+          <div class="event-details">
+            <h1>Panacea</h1>
+            <h4>A Solution towards Engineering Problems</h4>
+            <p>By</p>
+            <span class="event-contact"><img src="images/person.png">Mr. Girish Ayya</p>
+            <span class="event-contact">Avadhoot Automations</p>
+            <p><img src="images/calender.png" style="width:15px;"><span class="event-date"> 31st March 2023</span></p>
+            <p><img src="images/clock.png" style="width:15px;"><span class="event-time"> 10:30 am -5:00 pm</span></p>
+            <p>Coordinator Contact Info: <br><span class="event-contact"><img src="images/person.png"> Amey Mohile <img src="images/phone.png" style="width:15px;"> +91 95125 99149</span><br>
+              <span class="event-contact"><img src="images/person.png"> Ruthu Rajendra <img src="images/phone.png" style="width:15px;"> +91 70224 42783</span></p>
+            
+          </div>
+        </div>
+        <p>Description: <span class="event-description">A workshop that develops BRULE (an acronym for Break the RULE) thinking and creative aptitude towards providing solutions for a plethora of industrial problems. The participants will develop skills for understanding problems and contextual learning. This workshop will enable the students to change their mindset. The sessions will take you through the following steps in arriving at distinct solutions
+          <br>-> How to understand the problem?
+          <br>-> Gather information
+          <br>-> Analyze and Interpret
+          <br>-> Form an explanatory hypothesis.
+      </span></p>
+      </div>
+      
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img class="event_image"src="images/panacea_left.png">
+        </div>
+        <div class="column">
+          <div class="event-details">
+            <h1>Panacea</h1>
+            <h4>A Solution towards Engineering Problems</h4>
+            <p>By</p>
+            <span class="event-contact"><img src="images/person.png">Mr. Girish Ayya</p>
+            <span class="event-contact">Avadhoot Automations</p>
+            <p><img src="images/calender.png" style="width:15px;"><span class="event-date"> 31st March 2023</span></p>
+            <p><img src="images/clock.png" style="width:15px;"><span class="event-time"> 10:30 am -5:00 pm</span></p>
+            <p>Coordinator Contact Info: <br><span class="event-contact"><img src="images/person.png"> Amey Mohile <img src="images/phone.png" style="width:15px;"> +91 95125 99149</span><br>
+              <span class="event-contact"><img src="images/person.png"> Ruthu Rajendra <img src="images/phone.png" style="width:15px;"> +91 70224 42783</span></p>
+            
+          </div>
+        </div>
+        <p>Description: <span class="event-description">A workshop that develops BRULE (an acronym for Break the RULE) thinking and creative aptitude towards providing solutions for a plethora of industrial problems. The participants will develop skills for understanding problems and contextual learning. This workshop will enable the students to change their mindset. The sessions will take you through the following steps in arriving at distinct solutions
+          <br>-> How to understand the problem?
+          <br>-> Gather information
+          <br>-> Analyze and Interpret
+          <br>-> Form an explanatory hypothesis.
+      </span></p>
+      </div>
+    </div>
   <h1><a id="schedule" >SCHEDULE </h1>
     <img src="images/schedule.png"style="width:100%;display: block;">
   <h1><a id="about">ABOUT US</h1>
