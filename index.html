@@ -170,7 +170,7 @@ li button{
   <li><a href="#schedule">Schedule</a></li>
   <li><a href="#about">About</a></li>
   <li><h1>iACT 2023</h1></li>
-  <li><button onlclick="registration_page()">REGISTER NOW</button><li>
+  <li><button id="myButton">REGISTER NOW</button><li>
 </ul>
 <div class="dropdown">
     <button><img src="images/menu.png" class="menu-icon"/></button>
@@ -206,14 +206,11 @@ li button{
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
 
-</div>
-<script>
-  function registration_page():
-  {
-    window.open("regpage.html");
-  }
+  <script type="text/javascript">
+      document.getElementById("myButton").onclick = function () {
+          location.href = "regpage.html";
+      };
   </script>
+</div>
 </body>
 </html>
-
-
