@@ -79,8 +79,8 @@ li h1{
     font-weight: bold;
     margin-top: 3px;
     padding-top: 0px;
-    padding-left: 350px;
-    padding-right: 350px;
+    padding-left: 750px;
+    padding-right: 0px;
     padding-bottom: 0px;
     margin-bottom: 0;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
@@ -91,11 +91,11 @@ li h1{
 }
 .inputBox{
   position:relative;
-  width:250px;
+  width:200px;
 }
 .inputBox input
 {
-  width:450px;
+  width:300px;
   padding:10px;
   background-color: rgba(240, 255, 255, 0);
   border:1px solid rgba(255, 255, 255, 0.888);
@@ -134,7 +134,7 @@ li h1{
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 17px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -201,6 +201,10 @@ button{
     margin-left: 10px;
     background-color: #009efa;
 }
+ul{
+  width: 700px;
+  position: fixed;
+}
   li img{
     display: block;
     width:35px;
@@ -221,7 +225,7 @@ button{
     padding-top: 0px;
     padding-left: 200px;
     padding-right: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     margin-bottom: 0;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
@@ -242,12 +246,13 @@ button{
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }*/
 .dropdown {
-    top: 2px;
+    top: 0px;
+    right:15px;
   display: inline-block;
   position: fixed;
 }
 .dropdown button img{
-    margin-top: 0px;
+    margin-top: 2px;
     width: 35px;
 }
 .dropdown-content {
@@ -256,7 +261,7 @@ button{
   width: 150%;
   overflow: hidden;
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-  background-color: #004c58;
+  background-color: #009efa;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -269,7 +274,7 @@ button{
 }
 .dropdown-content a:hover {
   color: #FFFFFF;
-  background-color: #00A4BD;
+  background-color: #004c58;
 }
 
 }
@@ -284,7 +289,7 @@ button{
   <li><a href="#events">Events</a></li>
   <li><a href="#schedule">Schedule</a></li>
   <li><a href="#about">About</a></li>
-  <li><h1> Register iACT 2023</h1></li>
+  <li><h1> Register iACT </h1></li>
   <!--<li><button onclick="location.href='regpage.html'">REGISTER NOW</button><li>-->
 </ul>
 <div class="dropdown">
@@ -327,7 +332,7 @@ button{
   </div>
   <div class="inputBox">
     <input type="text" required="required">
-    <span>Faculty Advisor Name</span>
+    <span style="font-size: 0.8em;width:170px;">Faculty Advisor Name</span>
   </div>
   <div class="inputBox">
     <input type="text" required="required">
