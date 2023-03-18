@@ -2,6 +2,26 @@
 <html>
 <head>
 <style>
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #009efa; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00a2ffee; 
+}
 body {
 margin:0;
 overflow-x: hidden;
@@ -21,6 +41,7 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
+  box-shadow: 10px 5px 5px black;
 }
 
 li {
@@ -82,10 +103,27 @@ li h1{
     margin-top: 5px;
     display:none;
 }
+.mainframe img{
+  width:100%;
+  margin-top:45px;
+  display: block;
+}
+
 @media only screen and (max-width:700px){
+  .mainframe img{
+  width:100%;
+  margin-top:40px;
+  display: block;
+}
 button{
     margin-top: 2px;
     margin-bottom: 4px;
+}
+ul
+{
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+
 }
   li img{
     display: block;
@@ -173,39 +211,25 @@ li button{
   <li><button id="myButton">REGISTER NOW</button><li>
 </ul>
 <div class="dropdown">
-    <button><img src="images/menu.png" class="menu-icon"/></button>
+    <button><img src="images/menu.png" class="menu-icon"style="background-color:#00a2ffee;"/></button>
     <div class="dropdown-content">
     <a href="#events">Events</a>
     <a href="#schedule">Schedule</a>
     <a href="#about">About</a>
     </div>
   </div>
-<div style="padding:20px;margin-top:30px;height:1500px; color: azure    ;">
-  <h1>iACT</h1>
-  
-
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <h1><a id="events">EVENTS </h1>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-
+   <div class="mainframe">
+    <img src="images/maindesk.png">
+    </div>
+<div style="padding:20px;margin-top:0px;height:fit-content;color:azure;align-items:center;">
+  <h1><a id="events"style="padding-left">EVENTS </h1>
+    <img src="images/panacea.png" style="width:100%;display: block;">
+    <img src="images/aiml.png"style="width:100%;display: block;">
+    <img src="images/chatgpt.png"style="width:100%;display: block;">
+  <h1><a id="schedule" >SCHEDULE </h1>
+    <img src="images/schedule.png"style="width:100%;display: block;">
+  <h1><a id="about">ABOUT US</h1>
+    <img src="images/about.png"style="width:100%;display: block;">
   <script type="text/javascript">
       document.getElementById("myButton").onclick = function () {
           location.href = "regpage.html";
