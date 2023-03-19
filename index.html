@@ -43,7 +43,7 @@ ul {
   top: 0;
   width: 100%;
   box-shadow: 10px 5px 5px black;
-  z-index: 3;
+  z-index: 100;
 }
 
 li {
@@ -102,7 +102,7 @@ li h1{
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 .dropdown{
-    margin-top: 5px;
+    margin-top:5px;
     display:none;
 }
 .mainframe img{
@@ -141,7 +141,7 @@ p {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.193);  
+  background-color: rgba(3, 184, 244, 0.474);  
   backdrop-filter: blur(5px);
   box-shadow: 2px 2px 2px 2px#FFFFFF;
   padding: 40px 40px 40px 40px;
@@ -156,13 +156,109 @@ p {
 .event_image{
     width:400px;
   }
-
+.timeline{
+  position:relative;
+  max-width:1200px;
+  margin:100px auto;
+}
+.cbox{
+  padding:10px 50px;
+  position:relative;
+  width:35%;
+  background-color: rgba(3, 184, 244, 0.759); 
+}
+.text-box{
+  padding:10px 15px ;
+  background:#fff;
+  position:relative;
+  justify-content: space-around;
+  border-radius:6px;
+  color: #000;
+  font-size: 15px;
+  box-shadow: 2px 2px 2px 2px#FFFFFF;
+}
+.lcbox{
+  left:0;
+  padding:10px 50px;
+  position:relative;
+  width:42%;
+}
+.rcbox{
+  left:50%;
+  padding:10px 50px;
+  position:relative;
+  width:42%;
+}
+.lcbox_img
+{
+  position:absolute;
+  right:-20px;
+  top:32px;
+  z-index:10;
+}
+.rcbox_img
+{
+  position:absolute;
+  left:-20px;
+  top:32px;
+  z-index:10;
+}
+.timeline::after{
+  content:'';
+  position:absolute;
+  width:6px;
+  height:100%;
+  background:#009efa;
+  top:0;
+left:53%;
+margin-left:-3%;
+z-index:-1;
+animation: moveline 6s linear forwards;
+}
+@keyframes moveline{
+  0%{
+    height: 0%;
+  }
+  100%
+  {
+    height:100%;
+  }
+}
+.rcbox h3, 
+.lcbox h3 {
+  font-weight:800;
+}
+.left-container-arrow{
+  height:0;
+  width:0;
+  position:absolute;
+  top:28px;
+  z-index:-1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #009efa;
+  right:-15px;
+}
+.right-container-arrow{
+  height:0;
+  width:0;
+  position:absolute;
+  top:28px;
+  z-index:-1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #009efa;
+  left:-15px;
+}
 @media only screen and (max-width:700px){
-  body{
+  *{
     overflow-x: hidden;
   }
+  body{
+    overflow: hidden;
+  }
   .container{
-    background-color: rgba(255, 255, 255, 0.193);  
+    background-color:rgba(3, 184, 244, 0.474);  
   backdrop-filter: blur(5px);
   }
   .row {
@@ -195,6 +291,7 @@ p {
     width:200px;
     position: relative;
     margin-top:0px;
+    
     padding:0;  
 
   }
@@ -206,12 +303,12 @@ p {
 button{
     margin-top: 2px;
     margin-bottom: 4px;
+    
 }
 ul
-{
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+{ 
+  width: 700px;
   position: fixed;
-
 }
   li img{
     display: block;
@@ -253,10 +350,12 @@ li button{
     font-size: 15px;
     font-weight: bold;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    z-index: 100;
 }
 .dropdown {
     top: 2px;
-    z-index: 3;
+    left:2px;
+    z-index: 100;
   display: inline-block;
   position: fixed;
 }
@@ -285,13 +384,48 @@ li button{
   color: #FFFFFF;
   background-color: #00A4BD;
 }
+.timeline{
+ margin:50px auto;
+}
+.timeline::after{
+  left:31px
+}
+.rcbox,.lcbox{
+  width:100%;
+  padding-left: 80px;
+  padding-right: 50px;
+}
+.text-box{
+  width:60%;
+  font-size:13px;
+  margin-top: 10px;
+  margin-bottom:10px;
+}
+.rcbox{
+  left:0;
+}
+.rcbox_img,.lcbox_img{
+  left:10px;
+}
+.right-container-arrow,.left-container-arrow{
+  height:0;
+  width:0;
+  position:absolute;
+  top:20px;
+  z-index:-1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #009efa;
+  left:-15px;
+  border-left:0;
+  right:0;
+}
 }
 </style>
 <title>iACT 2023</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body background="images/bg.png">
-    
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#events">Events</a></li>
@@ -312,7 +446,7 @@ li button{
     <img src="images/maindesk.png">
     </div>
 <div style="padding:20px;margin-top:0px;height:fit-content;color:azure;align-items:center;">
-  <h1><a id="events"style="padding-left:30px;text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">EVENTS </h1>
+  <h1 style="padding-left: 80px;"><a id="events"style="padding-left:30px;text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">EVENTS </h1>
     <div class="container">
       <div class="row">
         <div class="column">
@@ -344,11 +478,11 @@ li button{
     <div class="container">
       <div class="row">
         <div class="column">
-          <img class="event_image"src="images/panacea_left.png">
+          <img class="event_image"src="images/mazerunner.png">
         </div>
         <div class="column">
           <div class="event-details">
-            <h1>Panacea</h1>
+            <h1>MAZE RUNNER</h1>
             <h4>A Solution towards Engineering Problems</h4>
             <p>By</p>
             <span class="event-contact"><img src="images/person.png">Mr. Girish Ayya</p>
@@ -357,7 +491,6 @@ li button{
             <p><img src="images/clock.png" style="width:15px;"><span class="event-time"> 10:30 am -5:00 pm</span></p>
             <p>Coordinator Contact Info: <br><span class="event-contact"><img src="images/person.png"> Amey Mohile <img src="images/phone.png" style="width:15px;"> +91 95125 99149</span><br>
               <span class="event-contact"><img src="images/person.png"> Ruthu Rajendra <img src="images/phone.png" style="width:15px;"> +91 70224 42783</span></p>
-            
           </div>
         </div>
         <p>Description: <span class="event-description">A workshop that develops BRULE (an acronym for Break the RULE) thinking and creative aptitude towards providing solutions for a plethora of industrial problems. The participants will develop skills for understanding problems and contextual learning. This workshop will enable the students to change their mindset. The sessions will take you through the following steps in arriving at distinct solutions
@@ -368,15 +501,169 @@ li button{
       </span></p>
       </div>
     </div>
-  <h1><a id="schedule" >SCHEDULE </h1>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img class="event_image"src="images/cha.png">
+        </div>
+        <div class="column">
+          <div class="event-details">
+            <h1>TUTORIAL ON CHATGPT</h1>
+            <h4>A Solution towards Engineering Problems</h4>
+            <p>By</p>
+            <span class="event-contact"><img src="images/person.png">Mr. Girish Ayya</p>
+            <span class="event-contact">Avadhoot Automations</p>
+            <p><img src="images/calender.png" style="width:15px;"><span class="event-date"> 31st March 2023</span></p>
+            <p><img src="images/clock.png" style="width:15px;"><span class="event-time"> 10:30 am -5:00 pm</span></p>
+            <p>Coordinator Contact Info: <br><span class="event-contact"><img src="images/person.png"> Amey Mohile <img src="images/phone.png" style="width:15px;"> +91 95125 99149</span><br>
+              <span class="event-contact"><img src="images/person.png"> Ruthu Rajendra <img src="images/phone.png" style="width:15px;"> +91 70224 42783</span></p>
+          </div>
+        </div>
+        <p>Description: <span class="event-description">A workshop that develops BRULE (an acronym for Break the RULE) thinking and creative aptitude towards providing solutions for a plethora of industrial problems. The participants will develop skills for understanding problems and contextual learning. This workshop will enable the students to change their mindset. The sessions will take you through the following steps in arriving at distinct solutions
+          <br>-> How to understand the problem?
+          <br>-> Gather information
+          <br>-> Analyze and Interpret
+          <br>-> Form an explanatory hypothesis.
+      </span></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img class="event_image"src="images/aiml.png">
+        </div>
+        <div class="column">
+          <div class="event-details">
+            <h1>AI ML WORKSHOP</h1>
+            <h4>A Solution towards Engineering Problems</h4>
+            <p>By</p>
+            <span class="event-contact"><img src="images/person.png">Mr. Girish Ayya</p>
+            <span class="event-contact">Avadhoot Automations</p>
+            <p><img src="images/calender.png" style="width:15px;"><span class="event-date"> 31st March 2023</span></p>
+            <p><img src="images/clock.png" style="width:15px;"><span class="event-time"> 10:30 am -5:00 pm</span></p>
+            <p>Coordinator Contact Info: <br><span class="event-contact"><img src="images/person.png"> Amey Mohile <img src="images/phone.png" style="width:15px;"> +91 95125 99149</span><br>
+              <span class="event-contact"><img src="images/person.png"> Ruthu Rajendra <img src="images/phone.png" style="width:15px;"> +91 70224 42783</span></p>
+          </div>
+        </div>
+        <p>Description: <span class="event-description">A workshop that develops BRULE (an acronym for Break the RULE) thinking and creative aptitude towards providing solutions for a plethora of industrial problems. The participants will develop skills for understanding problems and contextual learning. This workshop will enable the students to change their mindset. The sessions will take you through the following steps in arriving at distinct solutions
+          <br>-> How to understand the problem?
+          <br>-> Gather information
+          <br>-> Analyze and Interpret
+          <br>-> Form an explanatory hypothesis.
+      </span></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img class="event_image"src="images/pandp.png">
+        </div>
+        <div class="column">
+          <div class="event-details">
+            <h1>PAPER AND PROJECT PRESENTATION</h1>
+            <h4>A Solution towards Engineering Problems</h4>
+            <p>By</p>
+            <span class="event-contact"><img src="images/person.png">Mr. Girish Ayya</p>
+            <span class="event-contact">Avadhoot Automations</p>
+            <p><img src="images/calender.png" style="width:15px;"><span class="event-date"> 31st March 2023</span></p>
+            <p><img src="images/clock.png" style="width:15px;"><span class="event-time"> 10:30 am -5:00 pm</span></p>
+            <p>Coordinator Contact Info: <br><span class="event-contact"><img src="images/person.png"> Amey Mohile <img src="images/phone.png" style="width:15px;"> +91 95125 99149</span><br>
+              <span class="event-contact"><img src="images/person.png"> Ruthu Rajendra <img src="images/phone.png" style="width:15px;"> +91 70224 42783</span></p>
+          </div>
+        </div>
+        <p>Description: <span class="event-description">A workshop that develops BRULE (an acronym for Break the RULE) thinking and creative aptitude towards providing solutions for a plethora of industrial problems. The participants will develop skills for understanding problems and contextual learning. This workshop will enable the students to change their mindset. The sessions will take you through the following steps in arriving at distinct solutions
+          <br>-> How to understand the problem?
+          <br>-> Gather information
+          <br>-> Analyze and Interpret
+          <br>-> Form an explanatory hypothesis.
+      </span></p>
+      </div>
+    </div>
+  <h1><a id="schedule" >SCHEDULE</a></h1>
     <img src="images/schedule.png"style="width:100%;display: block;">
+  <h1>Timeline of Events</h1>
+  <div class="timeline">
+    <div class="lcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="lcbox_img">
+      <div class="text-box">
+        <h3>Inauguration</h3>
+        <h4>with ISAB members, BMSCE management, Faculty & Students of ISAB</h4>
+        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 9:45 am - 10:45 am</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+    <div class="rcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box">
+        <h3>Interactive Session on Innovation and Creativity</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 11:00 am - 11:15 am</h4>
+        <span class="right-container-arrow">
+      </div>
+    </div>
+    <div class="lcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;" class="lcbox_img">
+      <div class="text-box">
+        <h3>Creative Problem Solving Techniques</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 11:15 am - 12:30 am</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+    <div class="rcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box">
+        <h3>Hands on Session on CPS with quiz</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 12:30 am - 1:00 am</h4>
+        <span class="right-container-arrow">
+      </div>
+    </div>
+    <div class="lcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="lcbox_img">
+      <div class="text-box">
+        <h3>Inauguration</h3>
+        <h4>with ISAB members, BMSCE management, Faculty & Students of ISAB</h4>
+        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 9:45 am - 10:45 am</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+    <div class="rcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box">
+        <h3>Interactive Session on Innovation and Creativity</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 11:00 am - 11:15 am</h4>
+        <span class="right-container-arrow">
+      </div>
+    </div>
+    <div class="lcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;" class="lcbox_img">
+      <div class="text-box">
+        <h3>Creative Problem Solving Techniques</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 11:15 am - 12:30 am</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+    <div class="rcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box">
+        <h3>Hands on Session on CPS with quiz</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 12:30 am - 1:00 am</h4>
+        <span class="right-container-arrow">
+      </div>
+    </div>
+  </div>
+
   <h1><a id="about">ABOUT US</h1>
-    <img src="images/about.png"style="width:100%;display: block;">
+    <img src="images/about.png"style="width:100%;display:block;">
+  </div>
   <script type="text/javascript">
       document.getElementById("myButton").onclick = function () {
           location.href = "regpage.html";
       };
   </script>
-</div>
 </body>
 </html>
