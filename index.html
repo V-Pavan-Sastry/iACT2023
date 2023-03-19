@@ -250,15 +250,29 @@ animation: moveline 6s linear forwards;
   border-right: 15px solid #009efa;
   left:-15px;
 }
-@media only screen and (max-width:700px){
+.about{
+  background-color: #0075b8ee;
+   padding: 10px; 
+  color:#fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;margin:0;
+  overflow-x: hidden;
+}
+.about2{
+  padding-left:35%;
+  text-align: left;
+  color:#fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;margin:0;
+  overflow-x: hidden;
+}
+@media only screen and (max-width:600px){
   *{
     overflow-x: hidden;
   }
   body{
     overflow: hidden;
+    background-color: #02005d;
   }
   .container{
-    margin-top:30px;
     background-color:rgba(3, 184, 244, 0.474);  
   backdrop-filter: blur(5px);
   }
@@ -421,12 +435,19 @@ li button{
   border-left:0;
   right:0;
 }
+.about{
+  font-size: 10px;
+}
+.about2{
+  padding-left:5%;
+  
+}
 }
 </style>
 <title>iACT 2023</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body background="images/bg.png">
+<body style="background:rgb(2, 2, 56)">
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#events">Events</a></li>
@@ -447,7 +468,7 @@ li button{
     <img src="images/maindesk.png">
     </div>
 <div style="padding:20px;margin-top:0px;height:fit-content;color:azure;align-items:center;">
-  <h1 style="padding-left: 80px;"><a id="events"style="padding-left:30px;text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">EVENTS </h1>
+  <h1 style="padding-left: 80px;"><a id="events"style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;text-align: center;">EVENTS </h1>
     <div class="container">
       <div class="row">
         <div class="column">
@@ -580,16 +601,16 @@ li button{
       </span></p>
       </div>
     </div>
-  <h1><a id="schedule" >SCHEDULE</a></h1>
-    <img src="images/schedule.png"style="width:100%;display: block;">
-  <h1>Timeline of Events</h1>
+  <h1><a id="schedule" style="text-align: center;" >SCHEDULE</a></h1>
+  <h1 style="text-align: center;">Timeline of Events</h1>
   <div class="timeline">
+    <h4 style="text-align:center;font-size: medium; background-color:#00a2ffee;border-radius: 10px; padding: 5px;text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">Day 1 | 31st March</h4>
     <div class="lcbox">
       <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="lcbox_img">
       <div class="text-box">
         <h3>Inauguration</h3>
         <h4>with ISAB members, BMSCE management, Faculty & Students of ISAB</h4>
-        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 9:45 am - 10:45 am</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon </h4><h4><img src="images/clock.png" style="width:15px;"> 9:45 am to 10:45 am</h4>
         <span class="left-container-arrow">
       </div>
     </div>
@@ -598,7 +619,7 @@ li button{
       <div class="text-box">
         <h3>Interactive Session on Innovation and Creativity</h3>
         <h4>By xyz</h4>
-        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 11:00 am - 11:15 am</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 11:00 am to 11:15 am</h4>
         <span class="right-container-arrow">
       </div>
     </div>
@@ -607,7 +628,7 @@ li button{
       <div class="text-box">
         <h3>Creative Problem Solving Techniques</h3>
         <h4>By xyz</h4>
-        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 11:15 am - 12:30 am</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 11:15 am to 12:30 am</h4>
         <span class="left-container-arrow">
       </div>
     </div>
@@ -616,51 +637,223 @@ li button{
       <div class="text-box">
         <h3>Hands on Session on CPS with quiz</h3>
         <h4>By xyz</h4>
-        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 12:30 am - 1:00 am</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 12:30 am to 1:00 am</h4>
         <span class="right-container-arrow">
       </div>
     </div>
     <div class="lcbox">
       <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="lcbox_img">
       <div class="text-box">
-        <h3>Inauguration</h3>
-        <h4>with ISAB members, BMSCE management, Faculty & Students of ISAB</h4>
-        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 9:45 am - 10:45 am</h4>
+        <h3>FIEPER Introduction followed by BOT</h3>
+        <h4>By  Mr.Anand Iyer</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon </h4><h4><img src="images/clock.png" style="width:15px;"> 2:00 pm to 3:00 pm</h4>
         <span class="left-container-arrow">
       </div>
     </div>
     <div class="rcbox">
-      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
-      <div class="text-box">
-        <h3>Interactive Session on Innovation and Creativity</h3>
-        <h4>By xyz</h4>
-        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 11:00 am - 11:15 am</h4>
+      <img src="images/mazerunner.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box" style="background-color: #009efa;">
+        <h3>Maze Runner</h3>
+        <h4>24Hr Countdown Starts .....</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 3:15 onwards</h4>
         <span class="right-container-arrow">
       </div>
     </div>
     <div class="lcbox">
       <img src="images/iact_mini.png" width="55px" style="border-radius:5px;" class="lcbox_img">
       <div class="text-box">
-        <h3>Creative Problem Solving Techniques</h3>
+        <h3>Ideathon: Introduction and Rules</h3>
         <h4>By xyz</h4>
-        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 11:15 am - 12:30 am</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 3.15 pm 
+          to 
+          4.00 pm</h4>
         <span class="left-container-arrow">
       </div>
     </div>
     <div class="rcbox">
       <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
       <div class="text-box">
-        <h3>Hands on Session on CPS with quiz</h3>
+        <h3>Actual Problem Solving of IDEATHON and Evaluation</h3>
         <h4>By xyz</h4>
-        <h4><img src="images/calender.png" style="width:15px;"> 31st March </h4><h4><img src="images/clock.png" style="width:15px;"> 12:30 am - 1:00 am</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 4.00 pm 
+          to 
+          5.00 pm</h4>
+        <span class="right-container-arrow">
+      </div>
+    </div>
+    <div class="lcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;" class="lcbox_img">
+      <div class="text-box">
+        <h3>Industry Problem and Solutions + ITC Foods</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;">5:00pm
+          to
+          6.00 pm</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+    <div class="rcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box">
+        <h3>Cultural Activity</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 6.30 pm 
+          to 
+          7.00 pm</h4>
         <span class="right-container-arrow">
       </div>
     </div>
   </div>
+  <div class="timeline">
+    <h4 style="text-align:center;font-size: medium; background-color:#00a2ffee;border-radius: 10px; padding: 5px;text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">Day 2 | 1st April</h4>
+    <div class="lcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="lcbox_img">
+      <div class="text-box">
+        <h3>Tutorial 
+          on 
+          CHATGPT</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon </h4><h4><img src="images/clock.png" style="width:15px;"> 9.00 am 
+          to 
+          10.00 am</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+    <div class="rcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box">
+        <h3>Poster and Project presentation Session (Setup)</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;">9.00 am 
+          to 
+          10.00 am</h4>
+        <span class="right-container-arrow">
+      </div>
+    </div>
+    <div class="lcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;" class="lcbox_img">
+      <div class="text-box">
+        <h3>AI/ML and Skill Development by Honeywell</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 10.15am 
+          to 
+          1.15 am</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+    <div class="rcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box">
+        <h3>Poster and Project presentation Session(Display)</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 10.15am 
+          to 
+          1.15 am</h4>
+        <span class="right-container-arrow">
+      </div>
+    </div>
+    <div class="lcbox">
+      <img src="images/mazerunner.png" width="55px" style="border-radius:5px;"class="lcbox_img">
+      <div class="text-box" style="background-color: #009efa;">
+        <h3>Maze Runner</h3>
+        <h4>24Hr Hack Ends</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> at 3:15</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+    
+    
+    <div class="rcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;"class="rcbox_img">
+      <div class="text-box">
+        <h3>Poster and Project presentation Session (Presentation & Evaluation)</h3>
+        <h4>By  Mr.Anand Iyer</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon </h4><h4><img src="images/clock.png" style="width:15px;">2 .00 pm 
+          to
+          3.00pm </h4>
+        <span class="right-container-arrow">
+      </div>
+    </div>
+    
+    <div class="lcbox">
+      <img src="images/iact_mini.png" width="55px" style="border-radius:5px;" class="lcbox_img">
+      <div class="text-box">
+        <h3>Valedictory
+          ISA help for institute/student sections</h3>
+        <h4>By xyz</h4>
+        <h4><img src="images/loc.png" style="width:15px;"> Updating Soon  </h4><h4><img src="images/clock.png" style="width:15px;"> 3.15 pm 
+          to 
+          5.00 pm</h4>
+        <span class="left-container-arrow">
+      </div>
+    </div>
+  </div>
+  <h1 style="text-align: center;"><a id="about">ABOUT US</h1>
+  </div>
+  <h1 style="text-align: center;"><a id="about">ABOUT US</h1>
+  </div>
+    <div class="about">
+      <h3 style="text-align: center;">ABOUT iACT</h3>
+    <p style=" padding-left:10px;text-align: left;">iACT (ISA-B Automation & Control TechDay) is an annual event that is conducted by one of several student sections of ISA-B.Promoted for the first time in year 2014, by ISA-B for the benefit of student ISA members, ISA-B affiliated student sections partake in this annual event. BMSCE ISA Student section, hosted the first iACT event. This annual event facilitated by ISA-B in terms of content and oversight, is rich and diverse in content and provides a platform for engagement by students of automation and electrical sciences to showcase and learn from each other. The host educational institution together with the participating educational institutions stands to benefit by this annual iACT event sponsored by ISA-B.
 
-  <h1><a id="about">ABOUT US</h1>
-    <img src="images/about.png"style="width:100%;display:block;">
-  </div>
+      The primary objective of conducting ISA-B - iACT annual event is to bring all ISA-B affiliated student section members and faculty to a common platform which provides, a healthy competitive environment for participating students and engineering faculty to showcase their talent and learning in the evolving field of automation, digital, instrument, mechatronics, and electrical sciences. Rich exchange of innovative ideas and learnings is moderated and facilitated by experienced industry professionals for students to benefit from.
+      
+      Another major objective of ISA-B - iACT annual event, is for faculty members of Engineering Institutions to learn from their peers and emulate innovative processes that enrich their student learning programs.</p> 
+      <br>
+      <br>
+      <h3 style="text-align: center;">About International Society of Automation (ISA)</h3>
+      <p style=" padding-left:10px;text-align: left;">The International Society of Automation (ISA) is a non-profit professional association founded in 1945 to create a better world through automation. ISA empowers the global automation community through standards and knowledge sharing, driving the advancement of individual careers and the overall profession. ISA develops widely used global standards; certifies professionals; provides education and training; publishes books and technical articles; hosts conferences and exhibits; and provides networking and career development programs for its members and customers around the world
+
+        ISA created the ISA Global Cybersecurity Alliance (isa.org/ISAGCA) to advance cybersecurity readiness and awareness in manufacturing and critical infrastructure facilities and processes. The Alliance brings end-user companies, automation and control systems providers, IT infrastructure providers, services providers, system integrators, and other cybersecurity stakeholder organizations together to proactively address growing threats
+        
+        ISA owns Automation.com, a leading online publisher of automation-related content. Through a wholly-owned subsidiary, ISA bridges the gap between standards and their implementation with the ISA Security Compliance Institute (isasecure.org) and the ISA Wireless Compliance Institute (isa100wci.org).
+        </p>
+    <br>
+      <br>
+      <h3 style="text-align: center;">About B.M.S College of Engineering</h3>
+      <p style=" padding-left:10px;text-align: left;">The B.M.S. College of Engineering (BMSCE) was founded by a great visionary and philanthropist Late Sri. B. M. Sreenivasaiah (BMS) in the year 1946. After demise of the founder, Sri. B. S. Narayan the illustrious son of the Founder took over the reins of the College. Under his able leadership, the college grew from strength to strength. BMSCE is the first engineering college established in the country (pre independ- ent India) by a private enterprise. The college is an aided in-stitution (by Government of Karnataka) and affiliated to Vis- vesvaraya Technological University (VTU). BMSCE offers 15 UG, 16 PG & 15 Research programmes. About Electronics & Instrumentation Engg. The Department of Instrumentation Technology started in the year 1991. Currently the program offers Under Graduate (UG) degree with an intake of 60. The Department Infrastructure fulfills the requirements of academics and learning skills on the latest technology in the industry. Dedicated faculty with Ph.D who are into Research and Development activities at Institution level
+      </p>
+      <br>
+      <br>
+      <h3 style="text-align: center;">About Department of Electronics & Instrumentation Engineering</h3>
+      <p style=" padding-left:10px;text-align: left;">The Department of Electronics and Instrumentation Engg. started in the year 1991. More than twenty five batches of Engineers have graduated from Department of Instrumentation Technology, B.M.S College of Engineering
+        Currently the program offers Under Graduate (UG) degree with an intake of 60. The Department Infrastructure fulfills the requirements of academics and learning skills on the latest technology in the industry. Dedicated faculty with Ph.D who are into Research and Development activities at Institution level, Qualified technical staff and enthusiastic and intelligent students are the strength of the department
+        A well designed curriculum takes the student through basics of Engineering, core domain and development of competencies by the effective usage of Modern Engineering Tools like: MATLAB, LabVIEW, Multisim, Xilinx, IAR Embedded workbench, Code-Composer-Studio, Simulation tools, PCB design labs, process control loops and PLCs applications. The department has strong industry collaborations in the field of Sensors, Automation Control, Embedded Systems, IoT solutions through Professional bodies as well as through faculty contacts. Their contribution is reflected through guidance in curriculum design, organization of industrial visits, conduction of expert lectures, organization of workshops, and joint research. One of the important developmental activity of the department in latest years is to draw together key stakeholders viz. Alumni, employers, Faculty, Industries, Professional bodies and students in a neutral venue, one that allows them to discuss issues and foster collaborative activities around issues in which they have a strong common interest for the growth of the department
+      </p>
+    </div>
+      <div class="about2" style="background-color: #02005d;">
+        <h3 style="color:rgb(0, 255, 153); font-size: large;">Chief Patrons</h3>
+      <p style=" font-size: medium;">Dr. B. S. Ragini Narayan, Donor Trustee 
+        Chair Person,B.M.S.E.T<br>
+        Dr. Dayanand Pai, Chairman, B.M.S.C.E.<br>
+        Mr. Aviram Sharma, Trustee , B.M.S.E.T<br>
+        Mr.Ravi Venkatesam, Trustee,B.M.S.E.T</p>
+    <h3 style="color:rgb(0, 255, 153); font-size: large;"> Patrons</h3>
+      <p style=" font-size: medium;">Dr. S.Muralidhara, Principal, B.M.S.C.E.<br>
+        Dr. Suresh R. Reddy, Vice Principal (Aca) ,B.M.S.C.E.<br>
+        Dr. Bheemsha,Vice Principal (Admin) B.M.S.C.E. <br></p>
+        <h3 style="color:rgb(0, 255, 153); font-size: large;">Organising Chair</h3>
+      <p style="font-size: medium;">Dr. Santosh R. Desai, Professor & Head, Dept. of EIE,B.M.S.C.E</p>
+      <h3 style="color:rgb(0, 255, 153); font-size: large;">Organising Committee</h3>
+      <p style="font-size: medium;">Mr. S. R. Venkatapathy, Trustee- ISAB Past President<br>
+        Dr. Sunil S. Shah, Special Assignment Chair-ISAB, Past President ISAB<br>
+        Mr. Renukaprasad Belgur, Entrepreneurship -ISAB Past President ISAB<br>
+        Mr. Ravi Balakrishnan, Secretary-ISAB<br>
+        Mr. Krishna Puliyur, Board Member-ISAB Past President ISAB<br>
+        Mr. Prasanna Inamdar, Students and Education, -ISAB<br>
+        Dr. Jayesh Bharve, Honours and Awards -ISAB Past President ISAB<br>
+        Mr. Girish Ayya, Treasurer-ISAB<br>
+        Dr. Veena N. Hegde, Professor, Dept. of EIE., B.M.S.C.E.  <br>
+        Dr. Preethi K. Mane, Assoc. Professor, Dept. of EIE., B.M.S.C.E. <br> 
+        Mr. Kumar D., Asst. Professor, Dept. of EIE., B.M.S.C.E. </p>
+        <h3 style="color:rgb(0, 255, 153); font-size: large;">Contact Details</h3>
+        <p style=" font-size: medium;">Dr. Veena N Hegde - 9886081532<br>
+          Mr. Kumar D - 9743114046<br>
+          Mihir P - 8296689145<br>
+          Bhavye Bhasin - 9148722891</p>
+    </div>
+
+
   <script type="text/javascript">
       document.getElementById("myButton").onclick = function () {
           location.href = "regpage.html";
