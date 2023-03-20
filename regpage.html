@@ -49,6 +49,8 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 6%;
+  z-index: 99;
 }
 
 li {
@@ -67,14 +69,12 @@ li a {
   font-weight: bold;
 }
 
-li a:hover:not(.active) {
-  background-color: rgba(182, 179, 179, 0.967);
-}
-
-.active {
-  background-color: #009efa;
-  color: azure;
-}
+.backicon {
+  width:4%;
+  position:fixed;
+  top:0%;
+  left:2%;
+  z-index:100;}
 button{
     background-color:#00a2ffee;
     color: azure;
@@ -95,20 +95,14 @@ button:hover {
     background-color:#02005d;
 } 
 li h1{
-    color:#02005d;
+    color:#00a2ffee;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    left:35%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-top: 3px;
-    padding-top: 0px;
-    padding-left: 750px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-}
-.dropdown{
-    margin-top: 5px;
-    display:none;
 }
 .inputBox{
   position:relative;
@@ -148,6 +142,7 @@ li h1{
   font-size: 0.85em;
   padding: 0 10px;
   background: #009efa;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 .checkBox{
   display: block;
@@ -222,22 +217,27 @@ button{
     margin-left: 10px;
     background-color: #009efa;
 }
+.backicon{
+  width: 15%;
+  padding: 0;
+  margin:0;
+}
 ul{
-  width: 700px;
+  width: 100%;
   position: fixed;
+  
 }
   li img{
     display: block;
     width:35px;
-    padding-top: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 4px;
   }
-  li a{    
-    display:none;
-  }
-  li h1{
+ .li h1{
+  position: fixed;
+  top: 10%;
+  left: 20px;
+  z-index: 99;
+ }
+ /* li h1{
     color:#02005d;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -250,7 +250,7 @@ ul{
     margin-bottom: 0;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
-/*li button{
+li button{
     background-color:#00a2ffee;
     color: azure;
     margin-top: 7px;
@@ -265,7 +265,7 @@ ul{
     font-size: 15px;
     font-weight: bold;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-}*/
+}
 .dropdown {
     top: 0px;
     right:15px;
@@ -296,7 +296,7 @@ ul{
 .dropdown-content a:hover {
   color: #FFFFFF;
   background-color: #004c58;
-}
+}*/
 
 }
 </style>
@@ -306,22 +306,11 @@ ul{
 <body background="images/bg.png">
     
 <ul>
-    <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#events">Events</a></li>
-  <li><a href="#schedule">Schedule</a></li>
-  <li><a href="#about">About</a></li>
-  <li><h1> Register iACT </h1></li>
+    <li><a class="active" href="index.html"><img src="images/backarrow.png" class="backicon"></a></li>
+  <li><h1> Register - iACT </h1></li>
   <!--<li><button onclick="location.href='regpage.html'">REGISTER NOW</button><li>-->
 </ul>
-<div class="dropdown">
-    <button><img src="images/menu.png" class="menu-icon"style="background-color:#00a2ffee;"/></button>
-    <div class="dropdown-content">
-    <a href="#events">Events</a>
-    <a href="#schedule">Schedule</a>
-    <a href="#about">About</a>
-    </div>
-  </div>
-<div style="padding:20px;margin-top:30px;height:fit-content; color: azure    ;">
+<div style="padding:20px;margin-top:40px;height:fit-content; color: azure;">
   <div class="inputBox">
     <input type="text" required="required">
     <span>Name</span>
@@ -340,7 +329,7 @@ ul{
   </div>
   <div class="inputBox">
     <input type="text" required="required">
-    <span>usn</span>
+    <span style="font-size: 0.8em;width:277px;">University Serial Number/Roll no</span>
   </div>
   <div class="inputBox">
     <input type="text" required="required">
@@ -348,21 +337,24 @@ ul{
   </div>
   <div class="radioButton" style="padding: 20px 20px 20px 20px;">
     <label>Which category do you belong to?</label><br>
-    <input type="radio" id="1" name="membershipStatus" value="1">
+    <input type="radio" id="isa_member_yes" name="membershipStatus" value="1" onclick="toogle()">
     <label for="1"style="padding: 20px 20px 20px 20px;">ISA member</label><br>
-    <input type="radio" id="2" name="membershipStatus" value="2">
-    <label for="2" style="padding: 20px 20px 20px 20px;">Non ISA member from a college with ISA student section</label><br>
-    <input type="radio" id="3" name="membershipStatus" value="3">
-    <label for="3" style="padding: 20px 20px 20px 20px;">Non ISA member from a college without ISA student section</label><br>
+    <input type="radio" id="isa_member_yes" name="membershipStatus" value="2" onclick="toogle()">
+    <label for="2" style="padding: 20px 20px 20px 20px;">Non ISA member </label><br>
   </div>
-  <div class="inputBox">
-    <input type="text" required="required">
+  <div class="inputBox"id="isa_member_id">
+    <input type="text" required="required" >
+    <span style="font-size: 0.8em;width:282px;">ISA Membership ID</span>
+  </div>
+  <div class="inputBox" id="faculty_coordinator">
+    <input type="text" required="required" >
     <span style="font-size: 0.8em;width:170px;">Faculty Advisor Name</span>
   </div>
-  <div class="inputBox">
-    <input type="text" required="required">
+  <div class="inputBox" id="faculty_coordinator_contact">
+    <input type="text" required="required" >
     <span style="font-size: 0.8em;width:282px;">Contact number of Faculty Advisor</span>
   </div>
+  
   <br><br>
   <label class="checkBox">SELECT EVENTS:<label><br><br>
   <label class="checkBox">AI/ML WORKSHOP(1st April 9:00 am - 1:15 pm)
@@ -382,12 +374,43 @@ ul{
     <span class="checkmark"></span>
   </label>
   <br>
-  <a href="https://drive.google.com/file/d/1-4iPnyS6ruXySc0skFw7Q2-ob_86mc2s/view?usp=sharing" target="_blank"style="text-decoration:none;font-size:small;color: #eee;"><img src="images/info.png" style="width:15px;">Click Here for Event Details and Schedule</a></h2>
+  <a href="images/info.pdf" download="iACT_2023" target="_blank" style="text-decoration:none;font-size:small;color: #eee;"><img src="images/info.png" style="width:15px;">Click Here for Event Details and Schedule</a></h2>
   <br>
   <br>
   <button>Register</button>
 </div>
+<script type="text/javascript">
+var optionA = document.getElementById("isa_member_yes");  // JN01_01a is the HTML ID of the selection option "yes" 
+var optionB = document.getElementById("isa_member_no");  
+var question1 = document.getElementById("faculty_coordinator");  //   HTML ID of the text input
+var question2 = document.getElementById("faculty_coordinator_contact");
+var question3 = document.getElementById("isa_member_id");
+function toogle() {
+  // the two pipes (||) are a logicial "or"
+  // the condition checks: is option A selected or is B selected?
+  if (optionA.checked) {
+    // if "yes" or "maybe" is selected, then the question is shown
+    // no input ("") uses the default setting (display as usual)
+    question1.style.display = "";
+    question2.style.display = "";
+    question3.style.display = "";
+  } else {
+    // question is hidden if the "none" option is selected
+    question1.style.display = "none";
+    question2.style.display = "none";
+    question3.style.display = "none";
+  }
+}
+ 
+// The function should always be executed, if one of the three options is clicked on 
+//SoSciTools.attachEvent(optionA, "click", toogle);
+//SoSciTools.attachEvent(optionB, "click", toogle);
 
+ 
+// and the function should also be executed, so that the display at the beginning is correct
+// (e.g. hide the text input at the beginning)
+toogle();
+  </script>
 </body>
 </html>
 
