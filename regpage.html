@@ -341,7 +341,14 @@ function SubForm (){
       }
     },
     error: function(){
-      alert("There was an error :(")
+      if(optionA.checked){
+      alert("Registeration Sucessfull!\n You will recieve entry ticket by email \n after mannual verification of credentials\n Resubmit incase of inncorrect credentials");
+      location.reload();
+      }
+      else{
+        alert('Make Payment to confirm registrations');
+        window.open("https://docs.google.com/forms/d/1nj0edfwzrT7NV8CQ6IPGiFFJOp5v0jZZiLxacexpzKk/edit", "_blank");
+      }
     }
   });
 }
