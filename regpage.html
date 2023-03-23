@@ -362,25 +362,29 @@ function SubForm (){
       <span>Name</span>
     </div>
     <div class="inputBox">
-      <input type="text" required="required" name="College" onclick="check_fill(tb1)">
+      <input type="text" required="required" id="College" name="College" onclick="check_fill(tb1)">
       <span>College</span>
     </div>
     <div class="inputBox">
-      <input type="text" required="required" name="Place">
+      <input type="text" required="required" id="mobno" name="mobno" onclick="check_fill(tb2)">
+      <span>Mobile Number</span>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" id="email" name="email" onclick="check_fill(tb3)">
+      <span>email</span>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" id="usn" name="usn" onclick="check_fill(tb4)">
+      <span style="font-size: 0.8em;width:277px;">University Serial Number/Roll no</span>
+    </div>
+
+
+    <div class="inputBox">
+      <input type="text" required="required" name="Place" onclick="check_fill(tb5)">
       <span>Place</span>
     </div>
-  <div class="inputBox">
-    <input type="text" required="required"  name="email">
-    <span>email</span>
-  </div>
-  <div class="inputBox">
-    <input type="text" required="required" name="usn">
-    <span style="font-size: 0.8em;width:277px;">University Serial Number/Roll no</span>
-  </div>
-  <div class="inputBox">
-    <input type="text" required="required" name="mobno">
-    <span>Mobile Number</span>
-  </div>
+  
+  
   <br><br>
   <label class="checkBox">SELECT EVENTS:<label><br><br>
      <label class="checkBox"><h2 style="padding: 0%;">iACT 2023 (Talks and Interactive Sessions)</h2>
@@ -506,6 +510,10 @@ var optionEB = document.getElementById("panp_pres");
 var t1 = document.getElementById("text1");
 var q1 = document.getElementById("team_name");
 var tb1= document.getElementById("Name");
+var tb2= document.getElementById("College");
+var tb3= document.getElementById("mobno");
+var tb4= document.getElementById("email");
+var tb5= document.getElementById("usn");
 function check_fill(inputtx) 
    {
      if (inputtx.value.length == 0)
