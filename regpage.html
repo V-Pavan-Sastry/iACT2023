@@ -330,6 +330,9 @@ function SubForm (){
     url:"https://api.apispreadsheets.com/data/0JAWagouJ0Q9ZuFN/",
     type:"post",
     data:$("#myForm").serializeArray(),
+    error: function(){
+      alert('Error Submitting :(');
+    },
     success: function(){
       if(optionA.checked){
       alert("Registeration Sucessfull!\n You will recieve entry ticket by email \n after mannual verification of credentials\n Resubmit incase of inncorrect credentials");
@@ -337,11 +340,8 @@ function SubForm (){
       }
       else{
         alert('Make Payment to confirm registrations\n https://docs.google.com/forms/d/1nj0edfwzrT7NV8CQ6IPGiFFJOp5v0jZZiLxacexpzKk/edit');
-        window.location.href="https://docs.google.com/forms/d/1nj0edfwzrT7NV8CQ6IPGiFFJOp5v0jZZiLxacexpzKk/edit"
+        window.location.href="https://docs.google.com/forms/d/1nj0edfwzrT7NV8CQ6IPGiFFJOp5v0jZZiLxacexpzKk/edit";
       }
-    },
-    error: function(){
-      alert('Error Submitting :(')
     }
   });
 }
@@ -358,11 +358,11 @@ function SubForm (){
   <div class="container">
     <form id="myForm"> 
     <div class="inputBox">
-      <input type="text" name="Name" required>
+      <input type="text" name="Name" id="Name" required="required">
       <span>Name</span>
     </div>
     <div class="inputBox">
-      <input type="text" required="required" name="College">
+      <input type="text" required="required" name="College" onclick="check_fill(tb1)">
       <span>College</span>
     </div>
     <div class="inputBox">
@@ -495,6 +495,7 @@ function SubForm (){
 
 </div>
 <script type="text/javascript">
+
 var optionA = document.getElementById("isa_member_yes");  // JN01_01a is the HTML ID of the selection option "yes" 
 var optionB = document.getElementById("isa_member_no");  
 var question1 = document.getElementById("faculty_coordinator");  //   HTML ID of the text input
@@ -504,6 +505,16 @@ var optionEA = document.getElementById("maze_runner");  // JN01_01a is the HTML 
 var optionEB = document.getElementById("panp_pres");
 var t1 = document.getElementById("text1");
 var q1 = document.getElementById("team_name");
+var tb1= document.getElementById("Name");
+function check_fill(inputtx) 
+   {
+     if (inputtx.value.length == 0)
+      { 
+         alert("One of the necessary field is not filled \n Please Check");  	
+         return false; 
+      }  	
+      return true; 
+    } 
 function toogle() {
   // the two pipes (||) are a logicial "or"
   // the condition checks: is option A selected or is B selected?
@@ -536,6 +547,7 @@ function toggle1() {
  
 // and the function should also be executed, so that the display at the beginning is correct
 // (e.g. hide the text input at the beginning)
+check_fill();
 toggle1();
 toogle();
   </script>
